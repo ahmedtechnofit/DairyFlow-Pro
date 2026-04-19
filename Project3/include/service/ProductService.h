@@ -14,6 +14,7 @@ public:
     // لازم نعلن عن الدالة هنا عشان الـ CPP يشوفها
     bool saveProduct(Product product);
     std::vector<Product> getAllProducts();
+    bool deleteProduct(std::string barcode);
 };
 
 #endif

@@ -19,3 +19,7 @@ std::vector<Product> ProductController::getAllProducts()
 {
     return productService.getAllProducts();
 }
+bool ProductController::handleDeleteProduct(std::string barcode)
+{
+    return productService.deleteProduct(barcode);
+}

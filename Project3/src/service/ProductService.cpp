@@ -19,3 +19,10 @@ std::vector<Product> ProductService::getAllProducts()
 {
     return productDAO.getAll();
 }
+bool ProductService::deleteProduct(std::string barcode)
+{
+    if (barcode.empty())
+        return false;
+
+    return productDAO.deleteProduct(barcode);
+}

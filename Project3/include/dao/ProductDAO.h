@@ -11,6 +11,7 @@ public:
     std::vector<Product> getAllProducts();
 
     std::vector<Product> getAll();
+    bool deleteProduct(std::string barcode);
 };
 
 #endif

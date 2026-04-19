@@ -40,10 +40,15 @@ sql::ResultSet* Database::executeQuery(sql::Statement*& stmt, const std::string&
     stmt = con->createStatement();
     return stmt->executeQuery(query);
 }
-int Database::executeUpdate(const std::string& query) {
+int Database::executeUpdate(const std::string& query)
+{
     connect();
+
     sql::Statement* stmt = con->createStatement();
+
     int rows = stmt->executeUpdate(query);
+
     delete stmt;
+
     return rows;
 }

@@ -1,6 +1,7 @@
 // src/dao/ProductDAO.cpp
 #include "dao/ProductDAO.h"
 #include "dao/Database.h"
+#include <string>
 
 bool ProductDAO::addProduct(Product product) {
     // تأكد إن ترتيب العواميد (name, price, cost, quantity, barcode) هو نفس ترتيب الجدول في MySQL
@@ -57,4 +58,11 @@ std::vector<Product> ProductDAO::getAll()
     if (stmt != nullptr) delete stmt;
 
     return list;
+}
+bool ProductDAO::deleteProduct(std::string barcode)
+{
+    std::string query =
+        "DELETE FROM Products WHERE barcode = '" + barcode + "'";
+
+    return Database::executeUpdate(query) > 0;
 }

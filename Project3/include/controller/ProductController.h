@@ -15,7 +15,7 @@ public:
     bool handleCreateProduct(std::string name, double price, double cost, int qty, std::string barcode);
     std::vector<Product> getAllProducts();
     std::vector<Product> searchProduct(std::string keyword);
-    bool deleteProduct(std::string barcode);
+    bool handleDeleteProduct(std::string barcode);
 };
 
 #endif
