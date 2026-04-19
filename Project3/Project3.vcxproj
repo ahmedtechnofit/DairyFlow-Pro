@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e0500486-d5cd-4f54-ba54-8ea2fbb5ad71}</ProjectGuid>
+    <RootNamespace>Project3</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Project3</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STATIC_CONCPP;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\Program Files\MySQL\mysql-connector-c++-8.0.27-winx64\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\mysql-connector-c++-8.0.27-winx64\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlcppconn-static.lib;libcrypto.lib;libssl.lib;dnsapi.lib;secur32.lib;crypt32.lib;ws2_32.lib;Advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STATIC_CONCPP;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;C:\Program Files\MySQL\mysql-connector-c++-8.0.27-winx64\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\mysql-connector-c++-8.0.27-winx64\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlcppconn-static.lib;libcrypto.lib;libssl.lib;dnsapi.lib;secur32.lib;crypt32.lib;ws2_32.lib;Advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\auth\Session.cpp" />
+    <ClCompile Include="src\controller\AuthController.cpp" />
+    <ClCompile Include="src\controller\CustomerController.cpp" />
+    <ClCompile Include="src\controller\PlateCheeseController.cpp" />
+    <ClCompile Include="src\controller\ProductController.cpp" />
+    <ClCompile Include="src\controller\ProductionController.cpp" />
+    <ClCompile Include="src\controller\PurchaseController.cpp" />
+    <ClCompile Include="src\controller\SalesController.cpp" />
+    <ClCompile Include="src\dao\CustomerDAO.cpp" />
+    <ClCompile Include="src\dao\Database.cpp" />
+    <ClCompile Include="src\dao\PlateCheeseDAO.cpp" />
+    <ClCompile Include="src\dao\ProductDAO.cpp" />
+    <ClCompile Include="src\dao\ProductionDAO.cpp" />
+    <ClCompile Include="src\dao\PurchaseDAO.cpp" />
+    <ClCompile Include="src\dao\SalesDAO.cpp" />
+    <ClCompile Include="src\dao\UserDAO.cpp" />
+    <ClCompile Include="src\models\Customer.cpp" />
+    <ClCompile Include="src\models\PlateCheese.cpp" />
+    <ClCompile Include="src\models\Product.cpp" />
+    <ClCompile Include="src\models\Production.cpp" />
+    <ClCompile Include="src\models\Purchase.cpp" />
+    <ClCompile Include="src\models\Sale.cpp" />
+    <ClCompile Include="src\models\SubLayer.cpp" />
+    <ClCompile Include="src\models\User.cpp" />
+    <ClCompile Include="src\service\AuthService.cpp" />
+    <ClCompile Include="src\service\CustomerService.cpp" />
+    <ClCompile Include="src\service\PlateCheeseService.cpp" />
+    <ClCompile Include="src\service\ProductionService.cpp" />
+    <ClCompile Include="src\service\ProductService.cpp" />
+    <ClCompile Include="src\service\PurchaseService.cpp" />
+    <ClCompile Include="src\service\SubLayerServicecpp.cpp" />
+    <ClCompile Include="ui\AddProductForm.cpp" />
+    <ClCompile Include="ui\dashboard.cpp" />
+    <ClCompile Include="ui\login.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gui\login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="include\auth\Session.h" />
+    <ClInclude Include="include\controller\AuthController.h" />
+    <ClInclude Include="include\controller\CustomerController.h" />
+    <ClInclude Include="include\controller\PlateCheeseController.h" />
+    <ClInclude Include="include\controller\ProductController.h" />
+    <ClInclude Include="include\controller\ProductionController.h" />
+    <ClInclude Include="include\controller\PurchaseController.h" />
+    <ClInclude Include="include\controller\SalesController.h" />
+    <ClInclude Include="include\dao\BaseDAO.h" />
+    <ClInclude Include="include\dao\CustomerDAO.h" />
+    <ClInclude Include="include\dao\Database.h" />
+    <ClInclude Include="include\dao\PlateCheeseDAO.h" />
+    <ClInclude Include="include\dao\ProductDAO.h" />
+    <ClInclude Include="include\dao\ProductionDAO.h" />
+    <ClInclude Include="include\dao\PurchaseDAO.h" />
+    <ClInclude Include="include\dao\SalesDAO.h" />
+    <ClInclude Include="include\dao\UserDAO.h" />
+    <ClInclude Include="include\models\Customer.h" />
+    <ClInclude Include="include\models\PlateCheese.h" />
+    <ClInclude Include="include\models\Product.h" />
+    <ClInclude Include="include\models\Production.h" />
+    <ClInclude Include="include\models\Purchase.h" />
+    <ClInclude Include="include\models\Sale.h" />
+    <ClInclude Include="include\models\User.h" />
+    <ClInclude Include="include\service\AuthService.h" />
+    <ClInclude Include="include\service\CustomerService.h" />
+    <ClInclude Include="include\service\PlateCheeseService.h" />
+    <ClInclude Include="include\service\ProductionService.h" />
+    <ClInclude Include="include\service\ProductService.h" />
+    <ClInclude Include="include\service\PurchaseService.h" />
+    <ClInclude Include="include\service\SubLayerService.h" />
+    <ClInclude Include="include\ui\admin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ui\AddProductForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ui\dashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ui\login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ui\AddProductForm.resx">
+      <DependentUpon>ui\AddProductForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\dashboard.resx">
+      <DependentUpon>ui\dashboard.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\login.resx">
+      <DependentUpon>ui\login.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
