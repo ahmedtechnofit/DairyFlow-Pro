@@ -18,7 +18,7 @@ namespace Project3 {
 			ProductController controller;
 
 			if (controller.handleCreateProduct(name, price, cost, qty, barcode)) {
-				MessageBox::Show(L"Success: Product has been added! ✅", L"Success");
+				MessageBox::Show(L"Success: Product has been added! ✅", L"");
 				textBox1->Clear(); textBox2->Clear(); textBox3->Clear();
 				textBox5->Clear(); textBox6->Clear();
 			}
