@@ -27,12 +27,19 @@ void Database::connect() {
     }
 }
 
-sql::ResultSet* Database::executeQuery(const std::string& query) {
+sql::ResultSet* Database::executeQuery(sql::Statement*& stmt, const std::string& query)
+{
     connect();
-    sql::Statement* stmt = con->createStatement();
+
+    if (con == nullptr)
+    {
+        std::cout << "Connection is NULL ❌" << std::endl;
+        return nullptr;
+    }
+
+    stmt = con->createStatement();
     return stmt->executeQuery(query);
 }
-
 int Database::executeUpdate(const std::string& query) {
     connect();
     sql::Statement* stmt = con->createStatement();

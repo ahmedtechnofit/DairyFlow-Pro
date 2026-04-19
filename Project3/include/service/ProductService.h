@@ -1,8 +1,9 @@
 #ifndef PRODUCTSERVICE_H
 #define PRODUCTSERVICE_H
 
+#include <vector>
 #include "models/Product.h"
-#include "dao/ProductDAO.h" // عشان يشوف الـ DAO
+#include "dao/ProductDAO.h"// عشان يشوف الـ DAO
 
 class ProductService {
 private:
@@ -12,6 +13,7 @@ private:
 public:
     // لازم نعلن عن الدالة هنا عشان الـ CPP يشوفها
     bool saveProduct(Product product);
+    std::vector<Product> getAllProducts();
 };
 
 #endif

@@ -1,5 +1,6 @@
 // src/service/ProductService.cpp
 #include "service/ProductService.h"
+#include "dao/ProductDAO.h"
 
 bool ProductService::saveProduct(Product product) {
     // التأكد من أن البيانات منطقية
@@ -12,4 +13,9 @@ bool ProductService::saveProduct(Product product) {
 
 
     return productDAO.addProduct(product);
+
+}
+std::vector<Product> ProductService::getAllProducts()
+{
+    return productDAO.getAll();
 }

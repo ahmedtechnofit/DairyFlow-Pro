@@ -33,7 +33,7 @@ public:
     // تأكد من وجود السطر ده بالظبط في الـ public
     static sql::Connection* getConnection() { return con; }
 
-    static sql::ResultSet* executeQuery(const std::string& query);
+    static sql::ResultSet* executeQuery(sql::Statement*& stmt, const std::string& query);
     static int executeUpdate(const std::string& query);
 
 private:

@@ -1,7 +1,8 @@
 #ifndef PRODUCTCONTROLLER_H
 #define PRODUCTCONTROLLER_H
 
-#include <string>
+#include <vector>
+#include "models/Product.h"
 #include "service/ProductService.h" // عشان يشوف الـ Service
 
 class ProductController {
@@ -12,6 +13,9 @@ private:
 public:
     // لازم نعلن عن الدالة هنا
     bool handleCreateProduct(std::string name, double price, double cost, int qty, std::string barcode);
+    std::vector<Product> getAllProducts();
+    std::vector<Product> searchProduct(std::string keyword);
+    bool deleteProduct(std::string barcode);
 };
 
 #endif
