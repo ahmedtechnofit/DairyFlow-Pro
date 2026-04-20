@@ -12,6 +12,7 @@ public:
 
     std::vector<Product> getAll();
     bool deleteProduct(std::string barcode);
+    std::vector<Product> searchProducts(std::string name);
 };
 
 #endif

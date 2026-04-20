@@ -15,6 +15,7 @@ public:
     bool saveProduct(Product product);
     std::vector<Product> getAllProducts();
     bool deleteProduct(std::string barcode);
+    std::vector<Product> searchProducts(std::string keyword);
 };
 
 #endif

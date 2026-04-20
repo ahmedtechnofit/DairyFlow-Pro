@@ -23,3 +23,8 @@ bool ProductController::handleDeleteProduct(std::string barcode)
 {
     return productService.deleteProduct(barcode);
 }
+std::vector<Product> ProductController::searchProducts(std::string keyword)
+{
+    ProductService service;
+    return service.searchProducts(keyword);
+}

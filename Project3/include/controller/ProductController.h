@@ -16,6 +16,7 @@ public:
     std::vector<Product> getAllProducts();
     std::vector<Product> searchProduct(std::string keyword);
     bool handleDeleteProduct(std::string barcode);
+    std::vector<Product> searchProducts(std::string keyword);
 };
 
 #endif

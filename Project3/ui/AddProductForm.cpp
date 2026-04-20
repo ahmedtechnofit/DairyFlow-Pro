@@ -6,7 +6,7 @@
 #include "AddProductForm.h"
 #include "controller/ProductController.h"
 #include <msclr/marshal_cppstd.h>
-#include <string> // ضروري جداً عشان std::string
+#include <string>
 #include <vector>
 
 namespace Project3 {
@@ -118,4 +118,35 @@ namespace Project3 {
 			MessageBox::Show(L"System Error: " + ex->Message);
 		}
 	}
-}
+	System::Void AddProductForm::txtSearch_TextChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		String^ keywordManaged = txtSearch->Text;
+
+		std::string keyword = msclr::interop::marshal_as<std::string>(keywordManaged);
+
+		ProductController controller;
+		std::vector<Product> products = controller.searchProducts(keyword);
+
+		DataTable^ table = gcnew DataTable();
+
+		table->Columns->Add("ID");
+		table->Columns->Add("Name");
+		table->Columns->Add("Price");
+		table->Columns->Add("Cost");
+		table->Columns->Add("Quantity");
+		table->Columns->Add("Barcode");
+
+		for (auto& p : products)
+		{
+			table->Rows->Add(
+				p.getId(),
+				gcnew String(p.getName().c_str()),
+				p.getPrice(),
+				p.getCost(),
+				p.getQuantity(),
+				gcnew String(p.getBarcode().c_str())
+			);
+		}
+
+		dgvProducts->DataSource = table;
+	}};

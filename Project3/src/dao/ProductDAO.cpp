@@ -66,3 +66,45 @@ bool ProductDAO::deleteProduct(std::string barcode)
 
     return Database::executeUpdate(query) > 0;
 }
+std::vector<Product> ProductDAO::searchProducts(std::string name)
+{
+    std::vector<Product> list;
+
+    sql::Statement* stmt = nullptr;
+    sql::ResultSet* result = nullptr;
+
+    try
+    {
+        std::string query =
+            "SELECT id, name, price, cost, quantity, barcode FROM Products "
+            "WHERE name LIKE '%" + name + "%'";
+
+        result = Database::executeQuery(stmt, query);
+
+        if (result == nullptr)
+            return list;
+
+        while (result->next())
+        {
+            Product p;
+            p.setId(result->getInt("id"));
+
+            p.setName(result->getString("name"));
+            p.setPrice(result->getDouble("price"));
+            p.setCost(result->getDouble("cost"));
+            p.setQuantity(result->getInt("quantity"));
+            p.setBarcode(result->getString("barcode"));
+
+            list.push_back(p);
+        }
+    }
+    catch (sql::SQLException& e)
+    {
+        std::cout << "SQL Error: " << e.what() << std::endl;
+    }
+
+    if (result != nullptr) delete result;
+    if (stmt != nullptr) delete stmt;
+
+    return list;
+}

@@ -26,3 +26,7 @@ bool ProductService::deleteProduct(std::string barcode)
 
     return productDAO.deleteProduct(barcode);
 }
+std::vector<Product> ProductService::searchProducts(std::string keyword)
+{
+    return productDAO.searchProducts(keyword);
+}
