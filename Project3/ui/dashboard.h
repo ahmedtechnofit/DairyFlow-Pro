@@ -256,6 +256,8 @@ namespace project3 {
 		}
 
 private: System::Void btnLogout_Click(System::Object^ sender, System::EventArgs^ e);
+	   private:
+		   void LoadForm(System::Windows::Forms::Form^ form);
 
 
 

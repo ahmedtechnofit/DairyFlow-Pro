@@ -39,13 +39,17 @@ namespace Project3 {
 		System::Windows::Forms::Button^ btnShowProducts;
 		System::Windows::Forms::Button^ btn_delete;
 	private: System::Windows::Forms::TextBox^ txtSearch;
+	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::ComponentModel::IContainer^ components;
 
 
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -61,6 +65,8 @@ namespace Project3 {
 			this->btnShowProducts = (gcnew System::Windows::Forms::Button());
 			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			this->txtSearch = (gcnew System::Windows::Forms::TextBox());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvProducts))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -164,7 +170,7 @@ namespace Project3 {
 			// 
 			// btnShowProducts
 			// 
-			this->btnShowProducts->Location = System::Drawing::Point(548, 250);
+			this->btnShowProducts->Location = System::Drawing::Point(495, 239);
 			this->btnShowProducts->Name = L"btnShowProducts";
 			this->btnShowProducts->Size = System::Drawing::Size(100, 30);
 			this->btnShowProducts->TabIndex = 6;
@@ -173,7 +179,7 @@ namespace Project3 {
 			// 
 			// btn_delete
 			// 
-			this->btn_delete->Location = System::Drawing::Point(431, 250);
+			this->btn_delete->Location = System::Drawing::Point(349, 239);
 			this->btn_delete->Name = L"btn_delete";
 			this->btn_delete->Size = System::Drawing::Size(100, 30);
 			this->btn_delete->TabIndex = 5;
@@ -182,16 +188,31 @@ namespace Project3 {
 			// 
 			// txtSearch
 			// 
-			this->txtSearch->Location = System::Drawing::Point(677, 253);
+			this->txtSearch->Location = System::Drawing::Point(648, 243);
 			this->txtSearch->Name = L"txtSearch";
 			this->txtSearch->Size = System::Drawing::Size(100, 20);
 			this->txtSearch->TabIndex = 14;
 			this->txtSearch->TextChanged += gcnew System::EventHandler(this, &AddProductForm::txtSearch_TextChanged);
 			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(761, 246);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(44, 13);
+			this->label1->TabIndex = 15;
+			this->label1->Text = L":Search";
+			// 
 			// AddProductForm
 			// 
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->ClientSize = System::Drawing::Size(847, 413);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->txtSearch);
 			this->Controls->Add(this->lblBarcode);
 			this->Controls->Add(this->lblQty);
@@ -208,7 +229,6 @@ namespace Project3 {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Name = L"AddProductForm";
-			this->Load += gcnew System::EventHandler(this, &AddProductForm::AddProductForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvProducts))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -222,7 +242,7 @@ namespace Project3 {
 		System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void txtSearch_TextChanged(System::Object^ sender, System::EventArgs^ e);
 	
-private: System::Void AddProductForm_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+
+
 };
 }

@@ -1,8 +1,4 @@
-//#include "AddProductForm.h"
-//#include "controller/ProductController.h"
-//#include <msclr/marshal_cppstd.h>
-//using namespace System;
-//using namespace System::Windows::Forms;
+
 #include "AddProductForm.h"
 #include "controller/ProductController.h"
 #include <msclr/marshal_cppstd.h>
@@ -118,6 +114,7 @@ namespace Project3 {
 			MessageBox::Show(L"System Error: " + ex->Message);
 		}
 	}
+	//search products
 	System::Void AddProductForm::txtSearch_TextChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ keywordManaged = txtSearch->Text;
@@ -149,4 +146,5 @@ namespace Project3 {
 		}
 
 		dgvProducts->DataSource = table;
-	}};
+	}
+}
